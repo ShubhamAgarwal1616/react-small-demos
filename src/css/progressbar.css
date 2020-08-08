@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.a-fixed-left-grid {
+    position: relative;
+}
+
+.a-fixed-left-grid-inner {
+    padding-left: 26px;
+    height: 100%;
+    position: relative;
+}
+
+.a-fixed-left-grid-inner:before, .a-fixed-left-grid-inner:after {
+    display: table;
+    line-height: 0;
+    font-size: 0;
+    content: "";
+}
+
+.a-fixed-left-grid-inner:after {
+    clear: both;
+}
+
+.milestone-column.a-col-left {
+    position: absolute;
+}
+
+.milestone-column {
+    height: 100%;
+    min-height: 8rem;
+}
+
+.a-text-left {
+    text-align: left!important;
+}
+
+.a-col-left {
+    width: 26px;
+    margin-left: -26px;
+    float: left;
+}
+
+.a-fixed-left-grid-col, .a-fixed-right-grid-col {
+    overflow: visible;
+    zoom: 1;
+}
+
+.milestone-bar {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 11px;
+}
+
+.milestone-bar_background {
+    height: 100%;
+    z-index: 0;
+    background-image: linear-gradient(#E9E7E7 40%,rgba(255,255,255,0) 0);
+    background-position: right;
+    background-size: 10px 20px;
+    background-repeat: repeat-y;
+}
+
+.milestone-bar_background, .milestone-bar_foreground {
+    width: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.milestone-bar_foreground {
+    background-color: #4DC2B4;
+    z-index: 1;
+}
+
+.milestone-marker {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    opacity: 1;
+}
+
+.milestone.reached .milestone-marker:before {
+    height: 20px;
+    width: 20px;
+    background-color: #4DC2B4;
+    border: 3px solid #4DC2B4;
+    border-radius: 50%;
+}
+
+.milestone-marker:before {
+    content: '';
+    display: inline-block;
+}
+
+.milestone.reached .milestone-marker:after {
+    content: '';
+    width: 17px;
+    height: 13px;
+    top: 6.5px;
+    left: 4px;
+    position: absolute;
+    background-image: url(https://m.media-amazon.com/images/G/01/x-locale/cs/ship-track/pt2/milestone_checkmark_2x._V516143779_.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+
+
+
+.milestone-column.a-col-right {
+    padding-left: 9px!important;
+    width: auto;
+}
+
+.a-fixed-right-grid {
+    position: relative;
+}
+
+.a-fixed-left-grid-inner, .a-fixed-right-grid-inner {
+    position: relative;
+    padding: 0;
+}
+
+.a-fixed-right-grid-inner:before {
+    display: table;
+    content: "";
+    line-height: 0;
+    font-size: 0;
+}
+
+
+.a-row {
+    width: 100%;
+}
+
+.a-row:after, .a-row:before {
+    display: table;
+    content: "";
+    line-height: 0;
+    font-size: 0;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.a-spacing-none, .a-ws .a-ws-spacing-none {
+    margin-bottom: 0!important;
+}
+
+.milestone-explanation {
+    font-size: 15px;
+    line-height: 20px;
+    color: #29666D;
+    font-style: italic;
+}
+
+
+
+.milestone.notReached .milestone-marker:before {
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 3px solid #E9E7E7;
+    border-radius: 50%;
+}
+
+.last-milestone .milestone-bar {
+    display: none;
+}
+
+
+
+
+
+/*customized stylling*/
+.a-fixed-left-grid {
+    display: inline-table;
+    width: 20%;
+}
