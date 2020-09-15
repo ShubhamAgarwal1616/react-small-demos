@@ -9,6 +9,10 @@ export default class Grid extends React.Component {
     room: [],
   }
 
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
     let room = [
       ["0","0","0","0","0","0","0","0","x","e"],
@@ -44,7 +48,7 @@ export default class Grid extends React.Component {
     })
 
     return (
-      <div>
+      <div ref={this.props.refer} id={'divToPrint'}>
         <h1>Legacy Of Brynjolf</h1>
         <div className={"grid"}>
           {gridBlocks}

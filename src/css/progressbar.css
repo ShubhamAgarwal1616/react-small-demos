@@ -36,7 +36,7 @@ div {
 }
 
 .a-text-left {
-    text-align: left!important;
+    text-align: left !important;
 }
 
 .a-col-left {
@@ -64,7 +64,7 @@ div {
 .milestone-bar_background {
     width: 100%;
     z-index: 0;
-    background-image: linear-gradient(to right, #E9E7E7 50%, rgba(255,255,255,0) 0);
+    background-image: linear-gradient(to right, #E9E7E7 50%, rgba(255, 255, 255, 0) 0);
     background-position: top;
     background-size: 20px 10px;
     background-repeat: repeat-x;
@@ -116,17 +116,8 @@ div {
 }
 
 
-
-
-
-
-
-
-
-
-
 .milestone-column.a-col-right {
-    padding-top: 9px!important;
+    padding-top: 9px !important;
     height: auto;
 }
 
@@ -163,7 +154,7 @@ div {
 }
 
 .a-spacing-none, .a-ws .a-ws-spacing-none {
-    margin-right: 0!important;
+    margin-right: 0 !important;
 }
 
 .milestone-explanation {
@@ -172,7 +163,6 @@ div {
     color: #29666D;
     font-style: italic;
 }
-
 
 
 .milestone.notReached .milestone-marker:before {
@@ -188,11 +178,48 @@ div {
 }
 
 
-
-
-
 /*customized stylling*/
 .a-fixed-left-grid {
     display: inline-table;
     width: 20%;
+}
+
+
+
+
+
+
+
+.reached .milestone-bar_foreground {
+    animation-name: fill;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 400ms;
+}
+
+.reached .milestone-marker:before {
+    animation-name: show;
+    animation-duration: 400ms;
+    animation-timing-function: ease-in;
+}
+
+@keyframes show {
+    0% {
+        background-color: #fff;
+        border: 3px solid #E9E7E7;
+    }
+
+    100% {
+        background-color: #4DC2B4;
+        border: 3px solid #4DC2B4;
+    }
+}
+
+@keyframes fill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
 }
