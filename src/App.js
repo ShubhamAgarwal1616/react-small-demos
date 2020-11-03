@@ -5,11 +5,12 @@ import Home from "./components/context/home"
 import ReactPdf from "./components/progressbar/progressbar";
 import {SignupForm} from './components/formik/signup'
 import {Timeline} from "./components/timeline/timeline";
+import Photo from "./components/camera/photo";
 
 function App() {
   return (
     <div className={"App"}>
-        <Timeline/>
+        <Photo/>
     </div>
   );
 }
