@@ -1,5 +1,6 @@
 import {ColumnLayer} from "deck.gl";
 import {scaleLinear} from "d3-scale";
+import {ScatterplotLayer} from "@deck.gl/layers";
 
 export const RenderLayers = (props) => {
   let maxActive, minActive;
@@ -9,6 +10,10 @@ export const RenderLayers = (props) => {
   const value = data.map((a) => a.active);
   maxActive = Math.max(...value);
   minActive = Math.min(...value);
+
+  const sdata = [
+    {position: [-74.5, 40], size: 100}
+  ];
 
   const elevation = scaleLinear([minActive, maxActive], [0, 20000]);
 
@@ -26,5 +31,12 @@ export const RenderLayers = (props) => {
       getElevation: d => elevation(d.active),
       onHover,
     }),
+    new ScatterplotLayer({
+      id: 'my-scatterplot',
+      sdata,
+      getPosition: d => d.position,
+      getRadius: d => d.size,
+      getFillColor: [255, 0, 0]
+    })
   ];
 }
